@@ -5,6 +5,8 @@ const app = express()
 const schema = require('./schema')
 const PORT = 5678
 
+require('./db/setup')
+
 app.use('/graphql',
 	bodyParser.json(),
         graphqlExpress({schema})
